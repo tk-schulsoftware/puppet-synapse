@@ -33,13 +33,13 @@ event_cache_size: "10K"
 
 ## Ratelimiting ##
 
-#rc_messages_per_second: 0.2
-#rc_message_burst_count: 10.0
-#federation_rc_window_size: 1000
-#federation_rc_sleep_limit: 10
-#federation_rc_sleep_delay: 500
-#federation_rc_reject_limit: 50
-#federation_rc_concurrent: 3
+rc_messages_per_second: 200
+rc_message_burst_count: 10000
+federation_rc_window_size: 1000
+federation_rc_sleep_limit: 10
+federation_rc_sleep_delay: 500
+federation_rc_reject_limit: 50
+federation_rc_concurrent: 3
 
 ## Files ##
 
@@ -113,3 +113,12 @@ key_refresh_interval: "1d" # 1 Day.
 
 password_config:
    enabled: true
+
+modules:
+  - module: synapse_auto_accept_invite.InviteAutoAccepter
+    config:
+      # Optional: if set to true, then only invites for direct messages (1:1 rooms)
+      # will be auto accepted. Otherwise, all room invites are accepted.
+      # Defaults to false.
+      accept_invites_only_for_direct_messages: false
+
