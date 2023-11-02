@@ -69,13 +69,13 @@ class synapse::config(
   concat::fragment { 'synapse-homeserver-config':
     target  => "${synapse::conf_dir}/homeserver.yaml",
     content => hash2yaml($additional_config),
-    order   => '01'
+    order   => '02'
   }
 
   concat::fragment { 'synapse-homeserver':
     target  => "${synapse::conf_dir}/homeserver.yaml",
     content => template('synapse/homeserver.yaml.erb'),
-    order   => '02'
+    order   => '01'
   }
 
   file { "${synapse::conf_dir}/conf.d/server_name.yaml":
