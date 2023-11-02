@@ -34,59 +34,59 @@ event_cache_size: "10K"
 ## Ratelimiting ##
 
 rc_message:
-  per_second:  <%= rc_message_per_second %>
-  burst_count:  <%= rc_message_burst_count %>
+  per_second:  <%= @rc_message_per_second %>
+  burst_count:  <%= @rc_message_burst_count %>
 rc_registration:
-  per_second:  <%= rc_registration_per_second %>
-  burst_count:  <%= rc_registration_burst_count %>
+  per_second:  <%= @rc_registration_per_second %>
+  burst_count:  <%= @rc_registration_burst_count %>
 rc_registration_token_validity:
-  per_second:  <%= rc_registration_token_validity_per_second %>
-  burst_count:  <%= rc_registration_token_validity_burst_count %>
+  per_second:  <%= @rc_registration_token_validity_per_second %>
+  burst_count:  <%= @rc_registration_token_validity_burst_count %>
 rc_login:
   address:
-    per_second:  <%= rc_login_address_per_second %>
-    burst_count:  <%= rc_login_address_burst_count %>
+    per_second:  <%= @rc_login_address_per_second %>
+    burst_count:  <%= @rc_login_address_burst_count %>
   account:
-    per_second:  <%= rc_login_account_per_second %>
-    burst_count:  <%= rc_login_account_burst_count %>
+    per_second:  <%= @rc_login_account_per_second %>
+    burst_count:  <%= @rc_login_account_burst_count %>
   failed_attempts:
-    per_second:  <%= rc_login_failed_attempts_per_second %>
-    burst_count:  <%= rc_login_failed_attempts_burst_count %>
+    per_second:  <%= @rc_login_failed_attempts_per_second %>
+    burst_count:  <%= @rc_login_failed_attempts_burst_count %>
 rc_admin_redaction:
-  per_second:  <%= rc_admin_redaction_per_second_per_second %>
-  burst_count:  <%= rc_admin_redaction_burst_count %>
+  per_second:  <%= @rc_admin_redaction_per_second_per_second %>
+  burst_count:  <%= @rc_admin_redaction_burst_count %>
 rc_joins:
   local:
-    per_second:  <%= rc_joins_local_per_second %>
-    burst_count:  <%= rc_joins_local_burst_count %>
+    per_second:  <%= @rc_joins_local_per_second %>
+    burst_count:  <%= @rc_joins_local_burst_count %>
   remote:
-    per_second:  <%= rc_joins_remote_per_second %>
-    burst_count:  <%= rc_joins_remote_burst_count %>
+    per_second:  <%= @rc_joins_remote_per_second %>
+    burst_count:  <%= @rc_joins_remote_burst_count %>
 rc_joins_per_room:
-  per_second:  <%= rc_joins_per_room_per_second %>
-  burst_count:  <%= rc_joins_per_room_burst_count %>
+  per_second:  <%= @rc_joins_per_room_per_second %>
+  burst_count:  <%= @rc_joins_per_room_burst_count %>
 rc_3pid_validation:
-  per_second:  <%= rc_3pid_validation_per_second %>
-  burst_count:  <%= rc_3pid_validation_burst_count %>
+  per_second:  <%= @rc_3pid_validation_per_second %>
+  burst_count:  <%= @rc_3pid_validation_burst_count %>
 rc_invites:
   per_room:
-    per_second:  <%= rc_invites_per_room_per_second %>
-    burst_count:  <%= rc_invites_per_room_burst_count %>
+    per_second:  <%= @rc_invites_per_room_per_second %>
+    burst_count:  <%= @rc_invites_per_room_burst_count %>
   per_user:
-    per_second:  <%= rc_invites_per_user_per_second %>
-    burst_count:  <%= rc_invites_per_user_burst_count %>
+    per_second:  <%= @rc_invites_per_user_per_second %>
+    burst_count:  <%= @rc_invites_per_user_burst_count %>
   per_issuer:
-    per_second:  <%= rc_invites_per_issuer_per_second %>
-    burst_count:  <%= rc_invites_per_issuer_burst_count %>
+    per_second:  <%= @rc_invites_per_issuer_per_second %>
+    burst_count:  <%= @rc_invites_per_issuer_burst_count %>
 rc_third_party_invite:
-  per_second:  <%= rc_third_party_invite_per_second %>
-  burst_count:  <%= rc_third_party_invite_burst_count %>
+  per_second:  <%= @rc_third_party_invite_per_second %>
+  burst_count:  <%= @rc_third_party_invite_burst_count %>
 rc_federation:
-  window_size:  <%= rc_federation_window_size %>
-  sleep_limit:  <%= rc_federation_sleep_limit %>
-  sleep_delay:  <%= rc_federation_sleep_delay %>
-  reject_limit:  <%= rc_federation_reject_limit %>
-  concurrent:  <%= rc_federation_concurrent %>
+  window_size:  <%= @rc_federation_window_size %>
+  sleep_limit:  <%= @rc_federation_sleep_limit %>
+  sleep_delay:  <%= @rc_federation_sleep_delay %>
+  reject_limit:  <%= @rc_federation_reject_limit %>
+  concurrent:  <%= @rc_federation_concurrent %>
 federation_rr_transactions_per_room_per_second:  <%= federation_rr_transactions_per_room_per_second %>
 
 ## Files ##
