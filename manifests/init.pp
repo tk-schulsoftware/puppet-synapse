@@ -18,6 +18,7 @@ class synapse(
     Integer $listen_port = 8008,
     String  $listen_address = '127.0.0.1',
     Integer $metrics_port = 9002,
+    String  $metrics_address = '127.0.0.1',
     String  $conf_dir = '/etc/matrix-synapse',
     String  $data_dir = '/var/lib/matrix-synapse',
     String  $database_name = 'sqlite3',
