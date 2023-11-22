@@ -15,8 +15,12 @@ listeners:
     x_forwarded: false
 
     resources:
-      - names: [client, metrics]
+      - names: [client]
         compress: true
+
+  - port: <%= @metrics_port %>
+    type: metrics
+    bind_addresses: ['<%= @listen_address %>']
 
 ## Database ##
 

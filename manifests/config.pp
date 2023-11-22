@@ -8,6 +8,7 @@ class synapse::config(
   String  $server_name                                    = $synapse::server_name,
   Integer $listen_port                                    = $synapse::listen_port,
   String  $listen_address                                 = $synapse::listen_address,
+  Integer $metrics_port                                   = $synapse::metrics_port,
   String  $database_name                                  = $synapse::database_name,
   Hash    $database_args                                  = $synapse::database_args,
   String  $media_store_path                               = $synapse::media_store_path,
