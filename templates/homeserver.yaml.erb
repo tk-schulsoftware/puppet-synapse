@@ -122,6 +122,10 @@ thumbnail_sizes:
 url_preview_enabled: False
 max_spider_size: "10M"
 
+<% if @delete_stale_devices_after %>
+delete_stale_devices_after: <%= @delete_stale_devices_after %>
+<% end %>
+
 ## Registration ##
 
 enable_registration: <% if @registration_enabled %>True<% else %>False<% end %>

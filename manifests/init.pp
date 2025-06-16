@@ -68,6 +68,7 @@ class synapse(
     Float   $rc_federation_reject_limit = 40.0,
     Float   $rc_federation_concurrent = 5.0,
     Float   $federation_rr_transactions_per_room_per_second = 40.0,
+    String  $delete_stale_devices_after = undef,
 ) {
     include "${module_name}::repo"
     include "${module_name}::install"

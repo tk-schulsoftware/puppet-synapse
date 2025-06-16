@@ -54,6 +54,7 @@ class synapse::config(
   Float   $rc_federation_reject_limit                     = $synapse::rc_federation_reject_limit,
   Float   $rc_federation_concurrent                       = $synapse::rc_federation_concurrent,
   Float   $federation_rr_transactions_per_room_per_second = $synapse::federation_rr_transactions_per_room_per_second,
+  String  $delete_stale_devices_after                     = $synapse::delete_stale_devices_after,
 ) inherits synapse {
   file { $synapse::conf_dir:
     ensure => directory,
